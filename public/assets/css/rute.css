@@ -1,0 +1,53 @@
+body {
+    background-color: #111;
+    color: #fff;
+}
+
+#map {
+    height: 500px;
+    margin-bottom: 20px;
+}
+
+.container {
+    margin-top: 40px;
+}
+
+.btn {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    margin-right: 10px;
+}
+
+.btn-primary {
+    background-color: #38a1db;
+    border-color: #38a1db;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #1b6e94;
+    border-color: #1b6e94;
+}
+
+.btn-success {
+    background-color: #8cc63f;
+    border-color: #8cc63f;
+}
+
+.btn-success:hover,
+.btn-success:focus {
+    background-color: #6a8d2a;
+    border-color: #6a8d2a;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+}
+
+.btn-danger:hover,
+.btn-danger:focus {
+    background-color: #c73728;
+    border-color: #c73728;
+}

@@ -1,0 +1,185 @@
+/* PLB.css */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    width: 400px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #3949ab;
+    color: #000;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: inline-block;
+    width: 180px;
+    font-weight: 500;
+    color: #555;
+}
+
+.input-group input[type="number"] {
+    width: 160px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.input-group span {
+    margin-left: 5px;
+    color: #777;
+    font-size: 13px;
+}
+
+.btn-calculate,
+.btn-primary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #3949ab;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn-calculate:hover,
+.btn-primary:hover {
+    background-color: #283593;
+}
+
+.result-container {
+    margin-top: 20px;
+}
+
+.result-label {
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.chart-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#diagramContainer {
+    width: 100%;
+    height: 300px;
+}
+
+#resultPr {
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    width: 70px;
+    font-size: 14px;
+}
+
+.approx-resultPr {
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.resultM {
+    font-weight: bold;
+    color: #555;
+}
+
+.radio-group {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.radio-group label {
+    margin-right: 5px;
+    color: #555;
+    font-size: 14px;
+}
+
+/* Additional Styling - Skote Admin Templates Look */
+
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    height: auto;
+}
+
+.card {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #3949ab;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.input-group input[type="number"] {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #eaeaea;
+    font-size: 14px;
+}
+
+.btn-calculate,
+.btn-primary {
+    background-color: #3949ab;
+    transition: background-color 0.3s ease;
+}
+
+.btn-calculate:hover,
+.btn-primary:hover {
+    background-color: #283593;
+}
+
+.result-label {
+    color: #000;
+}
+
+.resultM {
+    color: #000;
+}
+
+.radio-group label {
+    color: #000;
+}
+.pr-calculation-form,
+.m-calculation-form {
+    position: sticky;
+}

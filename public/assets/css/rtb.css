@@ -1,0 +1,91 @@
+.container {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 4px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    padding-top: 2rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    flex: 0 0 200px;
+    /* Set a fixed width based on the longest label */
+}
+
+.form-group input[type="number"],
+.form-group select {
+    flex: 1;
+    /* Updated */
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.unit {
+    font-size: 12px;
+    margin-left: 5px;
+    font-weight: bold;
+    min-width: 100px;
+    /* Set a minimum width based on the longest unit */
+    text-align: right;
+}
+
+.btn-calculate {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.conclusion-container {
+    max-width: 550px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 4px;
+}
+
+.conclusion-container h3 {
+    margin-bottom: 10px;
+}
+
+.conclusion-container textarea {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    resize: vertical; /* Allow vertical resizing of the textarea */
+}
+
+.conclusion-container .btn-calculate {
+    /* Optional: Adjust button styling if needed */
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}

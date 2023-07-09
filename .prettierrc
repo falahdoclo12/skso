@@ -1,0 +1,11 @@
+{
+    "overrides": [
+        {
+            "files": "*.blade.php",
+            "options": {
+                "parser": "html",
+                "embeddedLanguageFormatting": "off"
+            }
+        }
+    ]
+}

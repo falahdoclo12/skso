@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium Multipurpose Admin & Dashboard Template">
+    <title>Rise Time Budget</title>
+    <!-- app favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="rtb.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculation-form">
+            <h2>Total Rise Time</h2>
+            <form class="tsys-calculation">
+                <div class="input-group">
+                    <label for="ttx">t<sub>tx</sub>:</label>
+                    <input type="number" id="ttx" step="0.0001" /><br />
+                </div>
+
+                <div class="input-group">
+                    <label for="Lq">L<sup>q</sup>:</label>
+                    <input type="number" id="Lq" step="0.0001" /><br />
+                </div>
+
+                <div class="input-group">
+                    <label for="B0">B<sub>0</sub>:</label>
+                    <input type="number" id="B0" step="0.0001" /><br />
+                </div>
+
+                <div class="input-group">
+                    <label for="D">D:</label>
+                    <input type="number" id="D" step="0.0001" /><br />
+                </div>
+
+                <div class="input-group">
+                    <label for="σλ">σ<sub>λ</sub>:</label>
+                    <input type="number" id="σλ" step="0.0001" /><br />
+                </div>
+
+                <div class="input-group">
+                    <label for="L">L:</label>
+                    <input type="number" id="L" step="0.0001" /><br />
+                </div>
+
+                <div class="input-group">
+                    <label for="trx">t<sub>rx</sub>:</label>
+                    <input type="number" id="trx" step="0.0001" /><br />
+                </div>
+
+                <button type="button" class="btn-calculate" onclick="calculateTsys()">
+                    Calculate
+                </button>
+            </form>
+
+            <div id="result-container">
+                <label for="tsys" class="result-label">
+                    t<sub>sys</sub>:
+                    <span id="result-tsys"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="calculation-form">
+            <h2>Link Calculation</h2>
+            <form class="link-calculation">
+                <div class="input-group">
+                    <label for="Rs">R<sub>s</sub>:</label>
+                    <input type="number" name="Rs" id="Rs" step="0.01" /><br />
+                </div>
+
+                <div class="input-group">
+                    <label for="Ps">P<sub>s</sub>:</label>
+                    <input type="number" name="Ps" id="Ps" step="0.01" /><br />
+                </div>
+
+                <div class="input-group">
+                    <label for="ac">a<sub>c</sub>:</label>
+                    <input type="number" name="ac" id="ac" step="0.01" /><br />
+                </div>
+
+                <div class="input-group">
+                    <label for="asp">a<sub>sp</sub>:</label>
+                    <input type="number" name="asp" id="asp" step="0.01" /><br />
+                </div>
+
+                <div class="input-group">
+                    <label for="af">a<sub>f</sub>:</label>
+                    <input type="number" name="af" id="af" step="0.01" /><br />
+                </div>
+
+                <div class="input-group">
+                    <label for="L2">L:</label>
+                    <input type="number" name="L2" id="L2" step="0.01" /><br />
+                </div>
+
+                <div class="input-group">
+                    <label for="Ms">M<sub>s</sub>:</label>
+                    <input type="number" name="Ms" id="Ms" step="0.01" /><br />
+                </div>
+
+                <button type="button" class="btn-calculate" onclick="calculatePr()">
+                    Calculate
+                </button>
+            </form>
+
+            <div id="result-container">
+                <label for="Pr" class="result-label">
+                    P<sub>r</sub>:
+                    <span id="result-Pr"></span>
+                </label>
+                <label for="n" class="result-label">
+                    <span id="result-n"></span>
+                </label>
+                <label for="massage" class="result-label" id="result-message"></label>
+            </div>
+        </div>
+
+        <div class="calculation-form">
+            <h2>Rise Time Budget</h2>
+            <form class="rtb-calculation">
+                <div class="input-group">
+                    <label for="tsys2">t<sub>sys</sub>:</label>
+                    <input type="number" name="tsys2" id="tsys2" step="0.0001" readonly /><br />
+                </div>
+
+                <div class="input-group">
+                    <label for="Dr">Data Rate:</label>
+                    <input type="number" name="Dr" id="Dr" step="1" /><br />
+                </div>
+                <button type="button" class="btn-calculate" onclick="calculateRtb()">
+                    Calculate
+                </button>
+            </form>
+
+            <div id="result-container">
+                <label for="rtb" class="result-label">
+                    T<sub>b</sub>:
+                    <span id="result-Tb"></span>
+                </label>
+                <label for="rtb" class="result-label">
+                    NRZ:
+                    <span id="result-nrz"></span>
+                </label>
+                <label for="rtb" class="result-label">
+                    RZ:
+                    <span id="result-rz"></span>
+                </label>
+                <label for="massage" class="result-label" id="nrz-sistem"></label>
+                <label for="massage" class="result-label" id="result-nrz-message"></label>
+                <label for="massage" class="result-label" id="rz-sistem"></label>
+                <label for="massage" class="result-label" id="result-rz-message"></label>
+            </div>
+        </div>
+    </div>
+    <script src="rtb.js"></script>
+</body>
+
+</html>

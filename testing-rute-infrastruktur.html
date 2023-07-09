@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rute Infrastruktur</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="rute.css">
+</head>
+
+<body>
+    <div class="container text-center">
+        <h2 class="mb-4">Rute Infrastruktur</h2>
+
+        <div id="map"></div>
+
+        <div class="btn-group" role="group" aria-label="KML Actions">
+            <button type="button" class="btn btn-primary" onclick="importKml()">Import KML</button>
+            <button type="button" class="btn btn-success" onclick="editKml()">Edit KML</button>
+            <button type="button" class="btn btn-info" onclick="editKml()">Download</button>
+            <button type="button" class="btn btn-danger" onclick="deleteKml()">Delete KML</button>
+        </div>
+    </div>
+
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeTPl1M48EmgOtaXLt5wST-BiGrIVIgJg&callback=initMap"
+        async defer></script>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="rute2.js"></script>
+</body>
+
+</html>
